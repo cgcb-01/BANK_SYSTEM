@@ -3,7 +3,18 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+#include <mutex>
+#include <thread>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <cstring>
+#include <cstdlib>
+#include <algorithm>
+#include <iomanip>
+#include <arpa/inet.h>
+#define BROADCAST_PORT 9000
+#define TCP_PORT 8050
+using namespace std;
 
 // Read from a file
 vector<vector<string>> readFile(const string &filename) {
